@@ -12,9 +12,9 @@ class IfThenPayServiceProvider extends ServiceProvider
     public function boot()
     {
         //Publishes package config file to applications config folder
-        $this->publishes([__DIR__ . '/config/ifthenpay.php' => config_path('ifthenpay.php')], 'config');
+        $this->publishes([__DIR__ . '/../../config/ifthenpay.php' => config_path('ifthenpay.php')], 'config');
         //Publishes package migration files to applications databas/migrations folder
-        $this->publishes([__DIR__ . '/database/migrations/' => database_path('migrations')], 'migrations');
+        $this->publishes([__DIR__ . '/migrations/' => database_path('migrations')], 'migrations');
     }
 
     /**
