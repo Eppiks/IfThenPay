@@ -1,5 +1,7 @@
 <?php namespace Eppiks\IfThenPay;
 
+use App\Http\Controllers\Controller;
+
 class IfThenPayController extends Controller
 {
 
