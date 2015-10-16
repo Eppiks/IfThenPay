@@ -1,0 +1,22 @@
+{
+  "name": "eppiks/ifthenpay",
+  "description": "Laravel Package for payments using IfThenPay",
+  "keywords": [
+    "payment",
+    "laravel",
+    "ifthenpay",
+    "purchase"
+  ],
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "José Teixeira",
+      "email": "joseteixeira@eppiks.com"
+    }
+  ],
+  "require": {
+    "laravel/laravel": "5.1.*"
+  },
+  "minimum-stability": "stable"
+}
