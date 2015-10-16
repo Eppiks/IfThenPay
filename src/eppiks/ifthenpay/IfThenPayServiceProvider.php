@@ -1,5 +1,6 @@
 <?php namespace Eppiks\IfThenPay;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class IfThenPayServiceProvider extends ServiceProvider
@@ -24,8 +25,8 @@ class IfThenPayServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['ifthenpay'] = $this->app->share(function ($app) {
-            return new IfThenPay;
-        });
+       App::bind('ifthenpay', function() {
+           return new IfThenPay();
+       });
     }
 }
