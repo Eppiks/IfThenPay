@@ -19,7 +19,9 @@
   "require": {
   },
   "minimum-stability": "stable",
-  "psr-4": {
-    "Eppiks\\IFThenPay\\": "src/eppiks/ifthenpay"
+  "autoload": {
+    "psr-4": {
+      "Eppiks\\IfThenPay\\": "src"
+    }
   }
 }
