@@ -1,4 +1,5 @@
 {
+  "version": "0.0.1",
   "name": "eppiks/ifthenpay",
   "description": "Laravel Package for payments using IfThenPay",
   "keywords": [
