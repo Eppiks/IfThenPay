@@ -1,11 +1,9 @@
 <?php namespace Eppiks\IfThenPay;
 
-use App\Http\Controllers\Controller;
-
-class IfThenPayController extends Controller
+class IfThenPay
 {
 
-    function format_number($number)
+    function formatNumber($number)
     {
         $verifySepDecimal = number_format(99, 2);
 
@@ -53,7 +51,7 @@ class IfThenPayController extends Controller
         return $valorTmp;
     }
 
-    public function generateMbRef($order_id, $order_value)
+    public function generateRef($order_id, $order_value)
     {
         $ent_id = config('ifthenpay.entity');
         $subent_id = config('ifthenpay.subentity');
@@ -76,7 +74,7 @@ class IfThenPayController extends Controller
 
         $order_value = sprintf("%01.2f", $order_value);
 
-        $order_value = $this->format_number($order_value);
+        $order_value = $this->formatNumber($order_value);
 
         if ($order_value < 1) {
             echo "Lamentamos mas é impossível gerar uma referência MB para valores inferiores a 1 Euro";

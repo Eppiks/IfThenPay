@@ -24,7 +24,8 @@ class IfThenPayServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Let Laravel Ioc Container know about our Controller
-        $this->app->make('Eppiks\IfThenPay\IfThenPayController');
+        $this->app['ifthenpay'] = $this->app->share(function ($app) {
+            return new IfThenPay;
+        });
     }
 }
