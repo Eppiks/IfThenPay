@@ -26,7 +26,7 @@ class IfThenPayServiceProvider extends ServiceProvider
     public function register()
     {
        App::bind('ifthenpay', function() {
-           return new IfThenPay();
+           return new \Eppiks\IfThenPay\IfThenPay;
        });
     }
 }
